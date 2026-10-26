@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://secret-justice.github.io/blue-under-the-glaze/sitemap.xml
+Sitemap: https://jadyshaw.github.io/blue-under-the-glaze/sitemap.xml
