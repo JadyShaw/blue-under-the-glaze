@@ -348,7 +348,7 @@ let ROUTE_FILTER = 'all';
 
 /* 航线所属海域：按端点归类（简化分层，用于筛选器） */
 const OCEAN_OF = {
-  jingdezhen: 'inland', nanchang: 'inland', guangzhou: 'sea', macao: 'sea',
+  jingdezhen: 'inland', nanchang: 'inland', guangzhou: 'pacific', macao: 'pacific',
   malacca: 'indian', calicut: 'indian', hormuz: 'indian', aden: 'indian',
   jeddah: 'indian', cairo: 'med', venice: 'med', lisbon: 'atlantic',
   seville: 'atlantic', amsterdam: 'atlantic', yuegang: 'pacific',
@@ -364,7 +364,9 @@ const OCEANS = [
   { k: 'med', zh: '地中海', en: 'Mediterranean' }
 ];
 function routeOcean(r) {
-  return OCEAN_OF[r.to] || OCEAN_OF[r.from] || 'sea';
+  /* 内河航段优先按 kind 判定（赣江—南岭等国内段不归属任何海域） */
+  if (r.kind === 'inland') return 'inland';
+  return OCEAN_OF[r.to] || OCEAN_OF[r.from] || 'pacific';
 }
 function renderRouteFilter() {
   document.getElementById('routeFilter').innerHTML = OCEANS.map(o => {
