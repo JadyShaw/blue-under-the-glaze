@@ -703,3 +703,23 @@ html[lang="en"] .about-p { display: none; }
 @media (hover: none) and (pointer: coarse) {
   .tl-nav button { min-height: 44px; padding: 10px 18px; }
 }
+
+/* ---------- 器物运动预览（v3.0） ---------- */
+.gal-grid figure { position: relative; }
+.gal-mo {
+  position: absolute; top: 10px; right: 10px; z-index: 2;
+  width: 26px; height: 26px; border-radius: 50%;
+  display: grid; place-items: center;
+  font-size: 10px; color: #fff; padding-left: 2px;
+  background: rgba(18, 31, 43, .62);
+  border: 1px solid rgba(255, 255, 255, .38);
+  backdrop-filter: blur(2px);
+  pointer-events: none;
+}
+#galLbVid {
+  width: 100%; max-height: 74vh; object-fit: contain;
+  background: #0d1a24; display: block;
+}
+@media (prefers-reduced-motion: reduce) {
+  #galLbVid { display: none !important; }
+}
