@@ -856,7 +856,7 @@ function renderTerms() {
 
 /* ---------- 6.5 器物画廊 ---------- */
 const GALLERY = [
-  { id: 'g01', file: 'assets/artifacts/g01_meiping_mudan.jpg', grp: 'origin', era: '元 · Yuan (1271–1368)',
+  { id: 'g01', file: 'assets/artifacts/g01_meiping_mudan.jpg', motion: 'assets/motion/g01.mp4', grp: 'origin', era: '元 · Yuan (1271–1368)',
     tz: '青花缠枝牡丹纹梅瓶', te: 'Meiping vase with scrolling peony',
     pz: '小口短颈、丰肩敛腹的梅瓶，是元代青花最具代表性的器型之一。腹部满绘缠枝牡丹，花瓣层叠、枝叶连环，钴料浓处见铁锈斑——这是进口苏麻离青的典型呈色。',
     pe: 'The meiping — small mouth, broad shoulders, tapering body — is among the most characteristic Yuan blue-and-white shapes. Its belly carries a dense scroll of peonies; the rust-brown flecks in the deepest cobalt mark the imported Sumali (smalt) blue.' },
@@ -872,7 +872,7 @@ const GALLERY = [
     tz: '青花海水白龙纹高足碗', te: 'Stem bowl with white dragons among waves',
     pz: '外壁绘五爪白龙腾跃于海水江崖之间，龙纹矫健、青花浓艳。高足中空，圈足内书青花楷书年款——宣德款识成为后世官窑书款的范式。',
     pe: 'Five-clawed white dragons leaping through waves and cliffs. The hollow stem and the blue-and-white reign mark inside the foot set the template for official-kiln marks thereafter.' },
-  { id: 'g05', file: 'assets/artifacts/g05_kraak_pan.jpg', grp: 'export', era: '明万历 · Wanli (1573–1620)',
+  { id: 'g05', file: 'assets/artifacts/g05_kraak_pan.jpg', motion: 'assets/motion/g05.mp4', grp: 'export', era: '明万历 · Wanli (1573–1620)',
     tz: '青花克拉克瓷盘', te: 'Kraak porcelain dish',
     pz: '盘心开光绘花卉石雀，边壁分格绘折枝花卉与杂宝——把器面切分为独立装饰空间的"开光"构图，正是克拉克瓷的标志。它因葡萄牙克拉克大帆船（carrack）得名，十六世纪末风靡欧洲。',
     pe: 'A central medallion of flowers and birds, with panelled borders dividing the rim into discrete decorative fields — the panelling that defines kraak. Named for the Portuguese carracks that carried it, kraak conquered Europe in the late sixteenth century.' },
@@ -880,19 +880,19 @@ const GALLERY = [
     tz: '青花璎珞纹净水瓶', te: 'Blue-and-white kendi with garland design',
     pz: '塔形腹、细长流，腹部满绘璎珞纹与莲瓣纹。康熙青花使用云南珠明料，发色翠艳、层次分明，号称"翠毛蓝"，是清代青花的最高水准。',
     pe: 'A tower-shaped body with a slender spout, covered in garland and lotus-petal bands. Kangxi cobalt from Yunnan yielded the celebrated "kingfisher blue" — the finest blue of the Qing.' },
-  { id: 'g07', file: 'assets/artifacts/g07_imari.jpg', grp: 'copy', era: '日本 · Japan, 17–18C',
+  { id: 'g07', file: 'assets/artifacts/g07_imari.jpg', motion: 'assets/motion/g07.mp4', grp: 'copy', era: '日本 · Japan, 17–18C',
     tz: '伊万里彩绘盘', te: 'Imari dish',
     pz: '日本有田窑仿景德镇青花而成，发展出釉下青花加釉上红金彩的"伊万里"。纹样仍是中国的牡丹与凤凰，配色却是日本的金碧富贵——纹样被继承，审美被重写。',
     pe: 'Arita ware imitated Jingdezhen blue-and-white, then invented Imari: underglaze blue heightened with overglaze red and gold. The motifs remain Chinese peonies and phoenixes; the aesthetic is emphatically Japanese.' },
-  { id: 'g08', file: 'assets/artifacts/g08_delft.jpg', grp: 'copy', era: '荷兰 · Netherlands, 17C',
+  { id: 'g08', file: 'assets/artifacts/g08_delft.jpg', motion: 'assets/motion/g08.mp4', grp: 'copy', era: '荷兰 · Netherlands, 17C',
     tz: '代尔夫特锡釉青花陶盘', te: 'Delftware dish',
     pz: '荷兰代尔夫特以锡釉陶（faience）而非瓷土仿制青花，钴蓝柔和、略带灰调。盘心绘中国风亭台楼阁与花鸟——那是荷兰画工从未到过的中国，一座想象中的亭台。',
     pe: 'Delft imitated blue-and-white in tin-glazed earthenware rather than porcelain. Its softer, greyer cobalt frames Chinese pavilions and birds: a China imagined by Dutch painters who had never been there.' },
-  { id: 'g09', file: 'assets/artifacts/g09_wedgwood.jpg', grp: 'copy', era: '英国 · England, 18C',
+  { id: 'g09', file: 'assets/artifacts/g09_wedgwood.jpg', motion: 'assets/motion/g09.mp4', grp: 'copy', era: '英国 · England, 18C',
     tz: '韦奇伍德碧玉细炻瓷浮雕章', te: 'Wedgwood jasperware cameo',
     pz: '英国韦奇伍德以碧玉细炻瓷做出深邃的蓝底白浮雕。青花在这里退出了"画在器物上的纹样"，变成"器物本身的颜色"——从表面装饰到材料本体的转译，是这次旅行最远的一站。',
     pe: 'Wedgwood turned the blue of qinghua into the body itself: jasperware, a deep blue stoneware carrying white classical reliefs. Blue ceased to be decoration on a vessel and became the material of the vessel.' },
-  { id: 'g10', file: 'assets/artifacts/g10_changsha.jpg', grp: 'early', era: '唐 · Tang (618–907)',
+  { id: 'g10', file: 'assets/artifacts/g10_changsha.jpg', motion: 'assets/motion/g10.mp4', grp: 'early', era: '唐 · Tang (618–907)',
     tz: '长沙窑青釉褐绿彩诗文壶', te: 'Changsha ewer with inscribed verse',
     pz: '青花出现之前，唐代长沙窑已用褐绿彩在青釉上书写诗文与绘画。它是九世纪印度洋贸易中中国陶瓷的主力，也是"以文字与图像装饰瓷器"这一传统更早的源头。',
     pe: 'Before blue-and-white, Tang-dynasty Changsha kilns painted verses and pictures in iron-brown and green over a celadon glaze. The mainstay of ninth-century Indian Ocean trade — and an earlier origin of the inscribed vessel.' }
@@ -911,6 +911,7 @@ function renderGallery() {
   document.getElementById('galGrid').innerHTML = list.map(g => `
     <figure class="gal-card" onclick="openLightbox('${g.id}')">
       <div class="gal-img"><img src="${g.file}" alt="${g.tz}" loading="lazy"></div>
+      ${g.motion ? '<span class="gal-mo" aria-hidden="true">▶</span>' : ''}
       <figcaption>
         <span class="gal-era">${g.era}</span>
         <b>${LANG === 'en' ? g.te : g.tz}</b>
@@ -925,14 +926,36 @@ function openLightbox(id) {
   const g = GALLERY.find(x => x.id === id);
   if (!g) return;
   LB_CUR = id;
-  document.getElementById('galLbImg').src = g.file;
-  document.getElementById('galLbImg').alt = g.tz;
+  const img = document.getElementById('galLbImg');
+  const vid = document.getElementById('galLbVid');
+  if (g.motion && vid) {
+    /* 有运动预览：播 4 秒镜头，静音循环；图片作为 poster 兜底 */
+    img.style.display = 'none';
+    vid.style.display = 'block';
+    vid.poster = g.file;
+    if (vid.getAttribute('src') !== g.motion) vid.setAttribute('src', g.motion);
+    vid.currentTime = 0;
+    vid.onerror = () => {   /* 单文件版/离线时视频不存在 → 静默回落为图片 */
+      vid.style.display = 'none';
+      img.style.display = 'block';
+      img.src = g.file;
+      img.alt = g.tz;
+    };
+    vid.play().catch(() => {});
+  } else {
+    if (vid) { vid.pause(); vid.style.display = 'none'; vid.removeAttribute('src'); }
+    img.style.display = 'block';
+    img.src = g.file;
+    img.alt = g.tz;
+  }
   document.getElementById('galLbCap').innerHTML =
     `<b>${g.tz} · ${g.te}</b><span>${g.era}</span><p>${LANG === 'en' ? g.pe : g.pz}</p>` +
     `<span class="gal-ai">${I18N[LANG].gal_cap_ai}</span>`;
   document.getElementById('galLightbox').classList.add('open');
 }
 function closeLightbox() {
+  const vid = document.getElementById('galLbVid');
+  if (vid) { vid.pause(); }
   document.getElementById('galLightbox').classList.remove('open');
   LB_CUR = null;
 }
